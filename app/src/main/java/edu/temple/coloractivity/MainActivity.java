@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -25,33 +26,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String color = parent.getItemAtPosition(position).toString();
         Toast.makeText(parent.getContext(), "Color changed to " + color, Toast.LENGTH_SHORT).show();
-        View colorView = findViewById(R.id.main_layout);
+        Intent startCanvas = new Intent(this, CanvasActivity.class);
+        String colorString = "#000000";
         switch (color) {
-            case "Red": colorView.setBackgroundColor(Color.parseColor("#FF0000"));
+            case "Red": colorString = "#FF0000";
                 break;
-            case "Green":  colorView.setBackgroundColor(Color.parseColor("#00FF00"));
+            case "Green":  colorString ="#00FF00";
                 break;
-            case "Blue":  colorView.setBackgroundColor(Color.parseColor("#0000FF"));
+            case "Blue":  colorString = "#0000FF";
                 break;
-            case "Orange":  colorView.setBackgroundColor(Color.parseColor("#FFA500"));
+            case "Orange":  colorString = "#FFA500";
                 break;
-            case "Purple": colorView.setBackgroundColor(Color.parseColor("#800080"));
+            case "Purple": colorString = "#800080";
                 break;
-            case "Cyan": colorView.setBackgroundColor(Color.parseColor("#00FFFF"));
+            case "Cyan": colorString = "#00FFFF";
                 break;
-            case "Maroon": colorView.setBackgroundColor(Color.parseColor("#800000"));
+            case "Maroon": colorString = "#800000";
                 break;
-            case "Magenta":  colorView.setBackgroundColor(Color.parseColor("#FF00FF"));
+            case "Magenta": colorString = "#FF00FF";
                 break;
-            case "Black":  colorView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            case "Black":  colorString = "#000000";
                 break;
-            case "White": colorView.setBackgroundColor(Color.parseColor("#000000"));
+            case "White": colorString = "#FFFFFF";
                 break;
-            case "Pink": colorView.setBackgroundColor(Color.parseColor("#EE82EE"));
+            case "Pink": colorString = "#EE82EE";
                 break;
             default:
                 break;
         }
+        startCanvas.putExtra("color", colorString);
+        startActivity(startCanvas);
     }
 
     @Override
