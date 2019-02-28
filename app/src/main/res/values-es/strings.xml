@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Color Activity</string>
-    <string name="format">Color changed to</string>
-    <string name="title1">Palette Activity</string>
-    <string name="title2">Color Activity</string>
+    <string name="app_name">Actividad de Color</string>
+    <string name="format">Color cambiado a</string>
+    <string name="title1">Actividad de Paleta</string>
+    <string name="title2">Actividad de Color</string>
     <string-array name="colorparse">
         <item>#FF0000</item>
         <item>#00FF00</item>
@@ -18,16 +18,16 @@
         <item>#EE82EE</item>
     </string-array>
     <string-array name="colorlang">
-        <item>Red</item>
-        <item>Green</item>
-        <item>Blue</item>
-        <item>Orange</item>
-        <item>Purple</item>
-        <item>Cyan</item>
-        <item>Maroon</item>
+        <item>Rojo</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Naranja</item>
+        <item>Violeta</item>
+        <item>Cian</item>
+        <item>Granate</item>
         <item>Magenta</item>
-        <item>Black</item>
-        <item>White</item>
-        <item>Pink</item>
+        <item>Negro</item>
+        <item>Blanco</item>
+        <item>Rosado</item>
     </string-array>
 </resources>
